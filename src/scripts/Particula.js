@@ -3,7 +3,7 @@ export class Particle {
     constructor(canvas){
         this.canvas = canvas;
         this.circleRadius = canvas.width / 2 ;
-        this.limiteY = this.canvas.height -100;
+        this.limiteY = this.canvas.height -50;
         this.disapearing = false;
         this.opacity = 0;
 

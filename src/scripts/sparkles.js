@@ -1,5 +1,8 @@
 import {Particle} from './Particula.js';
 
+const numParticulas = 400;
+
+
 let canvas = document.getElementById('lienzo');
 
 canvas.addEventListener('canvasResized', () => {
@@ -10,7 +13,7 @@ canvas.addEventListener('canvasResized', () => {
 
     const particulas = [];
 
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < numParticulas; i++) {
         particulas.push(new Particle(canvas));
     }
 
