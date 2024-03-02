@@ -1,0 +1,23 @@
+---
+---
+<script>
+    import '../scripts/sparkles.js'
+</script>
+
+<canvas id="lienzo" height="200">
+
+</canvas>
+
+<script>
+    window.onload = function() {
+
+        var h1 = document.getElementById('h1Nombre') as HTMLHeadingElement;
+        var canvas = document.getElementById('lienzo') as HTMLCanvasElement;
+        canvas.width = h1.offsetWidth;
+
+        let event = new Event('canvasResized');
+        canvas.dispatchEvent(event);
+    }
+    
+
+</script>

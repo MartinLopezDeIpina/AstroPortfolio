@@ -1,16 +1,80 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro'
+import Sparkle from '../components/sparkle.astro'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout tituloPagina="Inicio">
+
+
+
+	<div class="divNombre">
+	    <img src="/img/matt.png" class="foto">
+		<div class="divSparkles">
+			<h1 id="h1Nombre">Martín López de Ipiña</h1>
+			<Sparkle client:load/>
+		</div>
+	</div>
+
+
+
+	<h3 class="h3Subtitulo">Ingeniero de Software centrado en tecnologías backend~$</h3>
+	<h2>Estudios</h2>
+	<div class="divEstudios">
+		<div>
+			<h3>Ingeniería Informática, Facultad de Donostia San-Sebastian</h3>
+			<p>Desde Septiembre de 2021</p>
+		</div>
+		<div>
+			<p>Actualmente estoy cursando el tercer curso del grado de Ingeniería Informática en la UPV/EHU. Especializado en Ingeniería de Software. </p>
+			<p>Saber más</p>
+		</div>
+	</div>
+	<h2>Lenguajes</h2>
+	<h2>Frameworks</h2>
+	<h2>Proyectos</h2>
+</BaseLayout>
+
+<style>
+
+	canvas{
+		width:100%;
+	}
+
+	h1{
+		margin-bottom: 0px;
+	}
+
+	.foto {
+		margin-top: 10px;
+		padding: 10px;
+		margin-right: 40px;
+		border-radius: 50%;
+		width: 100px;
+		height: 100px;
+	}
+
+	.foto:hover {
+		opacity: 0.8;
+		transform: scale(100.05);
+		transition: 50.2s;
+	}
+
+	.divNombre {
+		margin-top: 20px;
+		display: flex;
+	}
+
+	.h3SubTitulo {
+		max-width: 60%;
+		font-weight: normal;
+		/*color:#43b843;*/
+		color:#00e400;
+	}
+
+	.divEstudios{
+		display: flex;
+	}
+
+
+
+</style>
