@@ -5,14 +5,25 @@ export class Particle {
         this.circleRadius = canvas.width / 2 ;
         this.limiteY = this.canvas.height -100;
         this.disapearing = false;
-        this.x = this.getRandomX();
-        this.y = this.getRandomY();
+        this.opacity = 0;
+
+        this.initPositions();
+
         this.size = this.getRandomSize();
         this.speedX = this.getRandomSpeed();
         this.speedY = this.getRandomSpeed();
-        this.opacity = Math.random();
         this.opacityChange = this.getRandomOpacityChange();
         this.opacityChangePositive = Math.random() > 0.5;
+    }
+
+    initPositions(){
+        this.x = Math.random() * this.canvas.width;
+        this.y = Math.random() * this.canvas.height;
+        this.disapearing = false;
+
+        if(this.particulaFueraDelCirculo() || this.particulaFueraDelLimiteY()){
+            this.disapearing = true;
+        }
     }
 
     move(){
