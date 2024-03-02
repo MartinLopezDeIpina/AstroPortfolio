@@ -9,8 +9,9 @@ import Sparkle from '../components/sparkle.astro'
 
 	<div class="divNombre">
 	    <img src="/img/matt.png" class="foto">
-		<div>
+		<div class="divNombreSparkles">
 			<h1 id="h1Nombre">Martín López de Ipiña</h1>
+			<hr class="hrNombre">
 			<Sparkle client:load/>
 		</div>
 	</div>
@@ -50,8 +51,33 @@ import Sparkle from '../components/sparkle.astro'
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
 		position: relative;
-		border-bottom: 2px solid #c45e72;
-		box-shadow: 0 20px 50px -30px #c45e72;
+	}
+	#h1Nombre::after{
+		content: "";
+		position: absolute;
+		bottom:0;
+		left: 0;
+		width:100%;
+		height: 2px;
+		background: radial-gradient(circle at center, #c45e72, transparent);
+	}
+
+	.hrNombre{
+		margin-top:0px;
+		margin-bottom:0px;
+		width:100%;
+		border: 0px;
+		height: 0px;
+		background: radial-gradient(circle at center, #c45e72, transparent);
+	}
+	
+	.divNombreSparkles {
+		display:block;
+		align-items: center;
+		text-align: center;
+		align-content: center;
+		justify-content: center;
+
 	}
 
 

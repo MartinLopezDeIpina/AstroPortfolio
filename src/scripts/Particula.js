@@ -14,6 +14,17 @@ export class Particle {
         this.speedY = this.getRandomSpeed();
         this.opacityChange = this.getRandomOpacityChange();
         this.opacityChangePositive = Math.random() > 0.5;
+
+        this.mouse = {x: 0, y: 0};
+        canvas.addEventListener('mousemove', (event) => {
+            const rect = this.canvas.getBoundingClientRect();
+            this.mouse.x = event.clientX - rect.left;
+            this.mouse.y = event.clientY - rect.top;
+        });
+        canvas.addEventListener('mouseout', (event) => {
+            this.mouse.x = 10000;
+            this.mouse.y = 10000;
+        });
     }
 
     initPositions(){
@@ -29,8 +40,20 @@ export class Particle {
     move(){
         this.changeOpacity();
 
-        this.x += this.speedX;
-        this.y += this.speedY;
+        const dx = this.mouse.x - this.x;
+        const dy = this.mouse.y - this.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+
+        if(distance < 50){
+            this.x -= dx/distance *2;
+            this.y -= dy/distance *2;
+            this.speedX = -this.speedX;
+            this.speedY = -this.speedY;
+        }else{
+            this.x += this.speedX;
+            this.y += this.speedY;
+        }
+
 
         if(this.particulaFueraDelCirculo() || this.particulaFueraDelLimiteY()){
             this.disapearing = true;
