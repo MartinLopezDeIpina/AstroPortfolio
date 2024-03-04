@@ -1,60 +1,59 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
+import IndexLayout from '../layouts/IndexLayout.astro'
 import Sparkle from '../components/sparkle.astro'
 ---
 
-<BaseLayout tituloPagina="Inicio">
+<IndexLayout tituloPagina="Inicio">
 
 
 
 	<div class="divNombre">
-	    <img src="/img/matt.png" class="foto">
 		<div class="divNombreSparkles">
 			<h1 id="h1Nombre">Martín López de Ipiña</h1>
 			<hr class="hrNombre">
-			<Sparkle client:load/>
+			<div class="divSparkles">
+				<Sparkle client:load/>
+			</div>
+		</div>
+		<div class="divFoto">
+			<img src="/img/matt.png" class="foto">
+		</div>
+	</div>
+	<div class="divSubtitulo">
+		<h3 class="h3Subtitulo subtitulo">Ingeniero de Software centrado en tecnologías backend~$</h3>
+		<div class="subtitulo">
+			<p>Actualmente estoy cursando el tercer curso del grado de Ingeniería Informática en la UPV/EHU. Especializado en Ingeniería de Software. </p>
 		</div>
 	</div>
 
 
 
-	<h3 class="h3Subtitulo">Ingeniero de Software centrado en tecnologías backend~$</h3>
 	<h2>Estudios</h2>
 	<div class="divEstudios">
 		<div>
 			<h3>Ingeniería Informática, Facultad de Donostia San-Sebastian</h3>
 			<p>Desde Septiembre de 2021</p>
 		</div>
-		<div>
-			<p>Actualmente estoy cursando el tercer curso del grado de Ingeniería Informática en la UPV/EHU. Especializado en Ingeniería de Software. </p>
-			<p>Saber más</p>
-		</div>
 	</div>
 	<h2>Lenguajes</h2>
 	<h2>Frameworks</h2>
 	<h2>Proyectos</h2>
-</BaseLayout>
+</IndexLayout>
 
 <style>
 
-	canvas{
-		width:100%;
-	}
 
 	h1{
 		margin-bottom: 0px;
 	}
 
 	#h1Nombre {
-		padding-right: 10px;
-		padding-left: 10px;
+		margin-top:0px;
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
-		position: relative;
 	}
 	#h1Nombre::after{
 		content: "";
-		position: absolute;
 		bottom:0;
 		left: 0;
 		width:100%;
@@ -67,7 +66,7 @@ import Sparkle from '../components/sparkle.astro'
 		margin-bottom:0px;
 		width:100%;
 		border: 0px;
-		height: 0px;
+		height: 2px;
 		background: radial-gradient(circle at center, #c45e72, transparent);
 	}
 	
@@ -76,18 +75,29 @@ import Sparkle from '../components/sparkle.astro'
 		align-items: center;
 		text-align: center;
 		align-content: center;
-		justify-content: center;
+	}
 
+	.divSparkles{
+		display:flex;
+		justify-content: center;
+		width:700px;
+		position:absolute;
+	}
+
+	.divFoto{
+		margin-top:50px;	
+		display: flex;
+		display:flex;
+		justify-content: center;
 	}
 
 
+
 	.foto {
-		margin-top: 10px;
-		padding: 10px;
-		margin-right: 40px;
+		z-index: 2;
 		border-radius: 50%;
-		width: 100px;
-		height: 100px;
+		width: 200px;
+		height: 200px;
 	}
 
 	.foto:hover {
@@ -97,12 +107,25 @@ import Sparkle from '../components/sparkle.astro'
 	}
 
 	.divNombre {
-		margin-top: 20px;
 		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
 
+	.divSubtitulo {
+		padding-top:20px;
+		display: flex;
+		justify-content: space-around;
+	}	
+
+	.subtitulo{
+		max-width: 40%;
+	}
+
+	
+
 	.h3SubTitulo {
-		max-width: 60%;
+		max-width: 50%;
 		font-weight: normal;
 		/*color:#43b843;*/
 		color:#00e400;
@@ -111,6 +134,7 @@ import Sparkle from '../components/sparkle.astro'
 	.divEstudios{
 		display: flex;
 	}
+
 
 
 

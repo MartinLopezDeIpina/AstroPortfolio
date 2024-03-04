@@ -4,8 +4,26 @@ import Navigation from "./Navigation.astro";
 
 
 <header>
-    <nav>
+    <nav class="divHeader">
+        <img class="imgLogo" src="../../public/svg/logo.svg">
         <Navigation />
-        <hr>
     </nav>
 </header>
+
+<style>
+    .divHeader{
+        display:flex;
+        justify-content: space-between;
+
+    }
+
+    .imgLogo{
+        width: 40px;
+        height: 40px;
+        transition: all ease 0.3s;
+    }
+    .imgLogo:hover{
+        transform: scale(1.2);
+        color: black;
+    }
+</style>

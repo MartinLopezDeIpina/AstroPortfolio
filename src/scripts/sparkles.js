@@ -1,6 +1,6 @@
 import {Particle} from './Particula.js';
 
-const numParticulas = 400;
+const numParticulas = 600;
 
 
 let canvas = document.getElementById('lienzo');
