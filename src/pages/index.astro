@@ -5,7 +5,7 @@ import Sparkle from '../components/sparkle.astro'
 
 <IndexLayout tituloPagina="Inicio">
 
-
+    <img class="imgLogo" src="/svg/logo.svg">
 
 	<div class="divNombre">
 		<div class="divNombreSparkles">
@@ -20,28 +20,31 @@ import Sparkle from '../components/sparkle.astro'
 		</div>
 	</div>
 	<div class="divSubtitulo">
-		<h3 class="h3Subtitulo subtitulo">Ingeniero de Software centrado en tecnologías backend~$</h3>
+		<h3 class="h3SubTitulo subtitulo">Ingeniero de Software centrado en tecnologías backend<span class="pVerde">~$</span></h3>
 		<div class="subtitulo">
 			<p>Actualmente estoy cursando el tercer curso del grado de Ingeniería Informática en la UPV/EHU. Especializado en Ingeniería de Software. </p>
 		</div>
 	</div>
-
-
-
-	<h2>Estudios</h2>
-	<div class="divEstudios">
-		<div>
-			<h3>Ingeniería Informática, Facultad de Donostia San-Sebastian</h3>
-			<p>Desde Septiembre de 2021</p>
-		</div>
+	<div class="divLinks">
+		<a class="link" href="/">Inicio</a>
+		<a class="link" href="/proyectos">Proyectos</a>
+		<a class="link" href="/experiencia">Experiencia</a>
 	</div>
-	<h2>Lenguajes</h2>
-	<h2>Frameworks</h2>
-	<h2>Proyectos</h2>
+
+
+
 </IndexLayout>
 
 <style>
 
+	p{
+		color:white;
+		font-size:18px;
+	}
+	.pVerde{
+		font-weight: bold;
+		color:#00e400;
+	}
 
 	h1{
 		margin-bottom: 0px;
@@ -61,13 +64,14 @@ import Sparkle from '../components/sparkle.astro'
 		background: radial-gradient(circle at center, #c45e72, transparent);
 	}
 
+
 	.hrNombre{
 		margin-top:0px;
 		margin-bottom:0px;
 		width:100%;
 		border: 0px;
 		height: 2px;
-		background: radial-gradient(circle at center, #c45e72, transparent);
+		background: radial-gradient(circle at center, #bb9af7, transparent);
 	}
 	
 	.divNombreSparkles {
@@ -94,6 +98,7 @@ import Sparkle from '../components/sparkle.astro'
 
 
 	.foto {
+		border: 2px solid #bb9af7;
 		z-index: 2;
 		border-radius: 50%;
 		width: 200px;
@@ -101,9 +106,8 @@ import Sparkle from '../components/sparkle.astro'
 	}
 
 	.foto:hover {
-		opacity: 0.8;
-		transform: scale(100.05);
-		transition: 50.2s;
+		transition: 0.3s;
+		box-shadow: 0 0 20px #bb9af7;
 	}
 
 	.divNombre {
@@ -113,9 +117,10 @@ import Sparkle from '../components/sparkle.astro'
 	}
 
 	.divSubtitulo {
-		padding-top:20px;
+		padding-top:25px;
 		display: flex;
 		justify-content: space-around;
+		align-items: center;
 	}	
 
 	.subtitulo{
@@ -126,14 +131,58 @@ import Sparkle from '../components/sparkle.astro'
 
 	.h3SubTitulo {
 		max-width: 50%;
-		font-weight: normal;
+		font-weight: bold;
 		/*color:#43b843;*/
-		color:#00e400;
+		color: white;
+		font-size: 26px;
 	}
 
 	.divEstudios{
 		display: flex;
 	}
+
+	.divLinks{
+		padding-top:25px;
+		display: flex;
+		justify-content: center;
+		padding-top: 20px;
+	}
+
+	.link{
+		padding:7px 14px;
+		text-decoration: none;
+		font-weight: bold;
+		font-size: 32px;
+		margin-right: 50px;
+		margin-left: 50px;
+		text-align: center;
+		/*color:#71d7c7; */
+		border-radius:10px;
+		color:white;
+		box-shadow: 0 0 4px #415A77;
+
+	}
+
+	.link:hover{
+		box-shadow: 0 0 30px #415A77;
+		transition-duration: 0.1s;
+		color: #71d7c7;
+	}
+
+	.link:active{
+		transform: scale(0.95);
+	}
+
+	.imgLogo{
+		position: absolute;
+        width: 40px;
+        height: 40px;
+        transition: all ease 0.3s;
+    }
+    .imgLogo:hover{
+        transform: scale(1.2);
+        color: black;
+    }
 
 
 
