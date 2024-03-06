@@ -5,12 +5,29 @@ import Navigation from "./Navigation.astro";
 
 <header>
     <nav class="divHeader">
-        <img class="imgLogo" src="../../public/svg/logo.svg">
+        <div class="divLogoNombre">
+            <img class="imgLogo" src="../../public/svg/logo.svg">
+            <p class="pNombre">Martín López de Ipiña</p>
+        </div>
         <Navigation />
     </nav>
 </header>
 
 <style>
+
+    .pNombre{
+        margin:0px;
+        padding-left: 10px;
+        color: #c45e72;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .divLogoNombre{
+        display: flex;
+        align-items: center;
+    }
+
     .divHeader{
         display:flex;
         justify-content: space-between;
