@@ -14,6 +14,7 @@
         var h1 = document.getElementById('h1Nombre') as HTMLHeadingElement;
         var canvas = document.getElementById('lienzo') as HTMLCanvasElement;
         canvas.width = h1.offsetWidth;
+        canvas.height = h1.offsetHeight*3;
 
         let event = new Event('canvasResized');
         canvas.dispatchEvent(event);

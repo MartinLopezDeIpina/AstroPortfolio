@@ -19,6 +19,17 @@ const nombre = "Martín López de Ipiña"
 			</div>
 			<div class="divFoto fadeInRightFoto">
 				<img src="/img/foton.jpeg" class="foto">
+				<a href="https://www.linkedin.com/in/Mart%C3%ADnL%C3%B3pezDeIpi%C3%B1aMu%C3%B1oz/" class="socialLink fadeInSocialLinks delayLinkedin">
+					<img src="/svg/linkedin.svg" class="circle circleLinkedin">
+				</a>
+				<a href="https://github.com/MartinLopezDeIpina" class="socialLink fadeInSocialLinks delayGithub">
+					<img src="/svg/github-mark.svg" class="circle circleGithub">
+				</a>
+				<a class="socialLink fadeInSocialLinks delayCV">
+					<div class="circle containerCV">
+						<img src="/svg/cv.svg" class="circleCV">
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -87,6 +98,20 @@ const nombre = "Martín López de Ipiña"
 		opacity:0;
 		animation-fill-mode: forwards;
 	}
+	.fadeInSocialLinks{
+		opacity:0;
+		animation: faseInBlur 0.5s ease;
+		animation-fill-mode: forwards;
+	}
+	.delayGithub{
+		animation-delay: 0.5s;
+	}
+	.delayLinkedin{
+		animation-delay: 0.6s;
+	}
+	.delayCV{
+		animation-delay: 0.7s;
+	}
 	@keyframes faseInBlur{
 		from{
 			opacity: 0;
@@ -142,11 +167,11 @@ const nombre = "Martín López de Ipiña"
 	.divSparkles{
 		display:flex;
 		justify-content: center;
-		width:700px;
 		position:absolute;
 	}
 
 	.divFoto{
+		position:relative;
 		margin-top:40px;	
 		display: flex;
 		display:flex;
@@ -159,14 +184,71 @@ const nombre = "Martín López de Ipiña"
 		box-shadow: 0 0 15px white;
 		z-index: 2;
 		border-radius: 50%;
-		width: 200px;
-		height: 200px;
+		width: 225px;
+		height: 225px;
 	}
 
 	.foto:hover {
 		transition: 0.3s;
 		box-shadow: 0 0 25px #bb9af7;
 	}
+
+	.circle {
+		width: 55px;
+		height: 55px;
+		border-radius: 50%;
+		overflow:hidden;
+	}
+	.circle:hover{
+		transition: 0.3s;
+		transform: scale(1.1);
+	}
+	.circleGithub{
+		background-color:#1a1b26 ;
+	}
+	.circleGithub:hover{
+		box-shadow : 0 0 15px #5c3791;
+	}
+	.containerCV{
+		display:flex;
+		justify-content: center;
+		overflow:hidden;
+	}
+	.circleCV{
+		background-color:#FF4D4D;
+		padding: 7px;
+	}
+	.containerCV:hover{
+		box-shadow : 0 0 15px #9e2929;
+	}
+	.circleLinkedin{
+		background-color:#1a1b26 ;
+	}
+	.circleLinkedin:hover{
+		box-shadow : 0 0 15px #054a6b;
+	}
+
+	.socialLink{
+		z-index: 3;
+		position:absolute;
+	}
+	.socialLink img{
+		box-sizing: border-box;
+		border:none;
+	}
+	.socialLink:nth-child(2) {
+		bottom: -18%;
+		transform-origin:bottom middle;
+	}
+	.socialLink:nth-child(3) {
+		bottom: -3%;
+		left: 0;
+	}
+	.socialLink:nth-child(4) {
+		bottom:-3%;
+		right: 0;
+	}
+
 
 	.divNombre {
 		display: flex;
