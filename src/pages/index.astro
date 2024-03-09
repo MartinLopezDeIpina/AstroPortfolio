@@ -8,30 +8,38 @@ const nombre = "Martín López de Ipiña"
 <IndexLayout tituloPagina="Inicio">
 
 
-	<div class="divNombre">
-		<h1 id="h1Nombre">Martín López de Ipiña</h1>
+
+<div class="divPaginaPrincipal">
+	<div class="divNombre ">
+		<h1 id="h1Nombre" class="hidden hiddenNombre">{nombre}
+		</h1>
 		<div class="divSparklesFoto">
-			<div class="divSparkles">
+			<div class="divSparkles hidden hiddenSparkles">
 				<Sparkle/>
 			</div>
-			<div class="divFoto">
+			<div class="divFoto hidden hiddenFoto">
 				<img src="/img/foton.jpeg" class="foto">
 			</div>
 		</div>
 	</div>
-	<div class="divSubtitulo">
-		<h3 class="h3SubTitulo subtitulo">Ingeniero de Software centrado en tecnologías backend<span class="pVerde">~$</span></h3>
-		<div class="subtitulo">
-			<p>Actualmente estoy cursando el tercer curso del grado de<span class="pRojo"> Ingeniería Informática </span>en la <span class="pRojo">UPV/EHU</span>. Especializado en Ingeniería de Software. </p>
+	<div class="divSubtitulo hidden">
+		<div class="divAuxiliarSubtitulo">
+			<h3 class="h3SubTitulo subtitulo hidden hiddenSubtitulo1">Ingeniero de Software centrado en tecnologías backend<span class="pVerde">~$</span></h3>
+			<div class="subtitulo">
+				<p class="hidden hiddenSubtitulo2">Actualmente estoy cursando el tercer curso del grado de<span class="pRojo"> Ingeniería Informática </span>en la <span class="pRojo">UPV/EHU</span>. Especializado en Ingeniería de Software. </p>
+			</div>
 		</div>
 	</div>
-
+</div>
 
 
 </IndexLayout>
 
 <style>
 
+	#divPaginaPrincipal{
+		height:100vh;
+	}
 
 	.divSparklesFoto{
 		width: 100%;
@@ -66,16 +74,6 @@ const nombre = "Martín López de Ipiña"
 		border-top-right-radius: 10px;
 	}
 
-
-	.hrNombre{
-		margin-top:0px;
-		margin-bottom:0px;
-		width:100%;
-		border: 0px;
-		height: 2px;
-		background: radial-gradient(circle at center, #bb9af7, transparent);
-	}
-	
 
 	.divSparkles{
 		display:flex;
@@ -113,19 +111,25 @@ const nombre = "Martín López de Ipiña"
 	}
 
 	.divSubtitulo {
+		self-align: flex-start;
+		width:100%;
 		padding-top:25px;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		text-align: left;
 	}	
 
-	.subtitulo{
-		max-width: 60%;
+	.divAuxiliarSubtitulo{
+		max-width:60%;
+		display: flex;
+		flex-direction: column;
+
 	}
 
-	
 
 	.h3SubTitulo {
+		margin-bottom: 20x;
 		font-weight: bold;
 		/*color:#43b843;*/
 		color: #bb9af7;
@@ -134,45 +138,10 @@ const nombre = "Martín López de Ipiña"
 
 	p{
 		font-size: 24px;
+		margin-top: 0px;
 
 	}
 
-	.divEstudios{
-		display: flex;
-	}
-
-	.divLinks{
-		display:flex;
-		justify-content: center;
-		padding-top:25px;
-		padding-top: 20px;
-		
-	}
-
-	.link{
-		padding:7px 14px;
-		text-decoration: none;
-		font-weight: bold;
-		font-size: 32px;
-		margin-right: 50px;
-		margin-left: 50px;
-		text-align: center;
-		/*color:#71d7c7; */
-		border-radius:10px;
-		color: #71d7c7;
-		box-shadow: 0 0 4px #415A77;
-
-	}
-
-	.link:hover{
-		box-shadow: 0 0 30px #415A77;
-		transition-duration: 0.1s;
-		color:white;
-	}
-
-	.link:active{
-		transform: scale(0.95);
-	}
 
 	.imgLogo{
 		position: absolute;

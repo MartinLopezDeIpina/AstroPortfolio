@@ -16,10 +16,11 @@ const { tituloPagina } = Astro.props;
 </head>
 <body>
     <header>
-        <Header />
+        <Header/>
     </header>
     <slot />    
     <Footer />
+    <script src="/src/scripts/animaciones.js"></script>
 </body>
 <style is:global>
     body {
@@ -29,11 +30,21 @@ const { tituloPagina } = Astro.props;
 </html>
 
 <style>
+    html{
+        min-height: 200%;
+    }
     header{
-        padding-bottom: 50px;
+        padding-top:30px;
+        padding-bottom: 10px;
+        margin-bottom:40px;
+        position:sticky;
+        top:0;
+        z-index: 1000;
+
+        background-color: #15151d;
     }
 	body{
 		width:75%;
-		padding-top: 1%;
+        margin-top:0px;
 	}
-</style>
+</style>		
