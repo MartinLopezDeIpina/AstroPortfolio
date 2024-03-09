@@ -5,28 +5,28 @@ import Sparkle from '../components/sparkle.astro'
 const nombre = "Martín López de Ipiña"
 ---
 
-<IndexLayout tituloPagina="Inicio">
+<IndexLayout tituloPagina="Martín">
 
 
 
 <div class="divPaginaPrincipal">
 	<div class="divNombre ">
-		<h1 id="h1Nombre" class="hidden hiddenNombre">{nombre}
+		<h1 id="h1Nombre" class="fadeInLeftNombre">{nombre}
 		</h1>
 		<div class="divSparklesFoto">
-			<div class="divSparkles hidden hiddenSparkles">
+			<div class="divSparkles fadeInSparkles">
 				<Sparkle/>
 			</div>
-			<div class="divFoto hidden hiddenFoto">
+			<div class="divFoto fadeInRightFoto">
 				<img src="/img/foton.jpeg" class="foto">
 			</div>
 		</div>
 	</div>
-	<div class="divSubtitulo hidden">
+	<div class="divSubtitulo">
 		<div class="divAuxiliarSubtitulo">
-			<h3 class="h3SubTitulo subtitulo hidden hiddenSubtitulo1">Ingeniero de Software centrado en tecnologías backend<span class="pVerde">~$</span></h3>
+			<h3 class="h3SubTitulo subtitulo fadeInSubtitulo1">Ingeniero de Software centrado en tecnologías backend<span class="pVerde">~$</span></h3>
 			<div class="subtitulo">
-				<p class="hidden hiddenSubtitulo2">Actualmente estoy cursando el tercer curso del grado de<span class="pRojo"> Ingeniería Informática </span>en la <span class="pRojo">UPV/EHU</span>. Especializado en Ingeniería de Software. </p>
+				<p class="fadeInSubtitulo2">Actualmente estoy cursando el tercer curso del grado de<span class="pRojo"> Ingeniería Informática </span>en la <span class="pRojo">UPV/EHU</span>. Especializado en Ingeniería de Software. </p>
 			</div>
 		</div>
 	</div>
@@ -36,6 +36,70 @@ const nombre = "Martín López de Ipiña"
 </IndexLayout>
 
 <style>
+
+	.fadeInLeftNombre{
+		animation: faseInLeft 1s ease;
+		opacity:0;
+		animation-fill-mode: forwards;
+	}
+	@keyframes faseInLeft{
+		from{
+			opacity: 0;
+			transform: translateX(-10%);
+		}
+		to{
+			opacity: 1;
+			transform: translateX(0%);
+		}
+	}
+
+	.fadeInRightFoto{
+		animation: faseInRight 1s ease;
+		opacity:0;
+		animation-fill-mode: forwards;
+	}
+	@keyframes faseInRight{
+		from{
+			opacity: 0;
+			transform: translateX(50%);
+		}
+		to{
+			opacity: 1;
+			transform: translateX(0%);
+		}
+	}
+
+	.fadeInSubtitulo1{
+		animation: faseInBlur 0.6s ease;
+		opacity:0;
+		animation-fill-mode: forwards;
+		animation-delay: 300ms;
+	}
+	.fadeInSubtitulo2{
+		animation: faseInBlur 0.6s ease;
+		opacity:0;
+		animation-fill-mode: forwards;
+		animation-delay: 400ms;
+	}
+	.fadeInSparkles{
+		animation: faseInBlur 1s ease;
+		animation-delay: 0.5s;
+		opacity:0;
+		animation-fill-mode: forwards;
+	}
+	@keyframes faseInBlur{
+		from{
+			opacity: 0;
+			filter:blur(2px);
+		}
+		to{
+			opacity: 1;
+			filter:blur(0px);
+		}
+	}
+
+	
+
 
 	#divPaginaPrincipal{
 		height:100vh;
