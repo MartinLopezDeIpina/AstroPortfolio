@@ -18,9 +18,6 @@ h2{
     color: #c45e72;
 }
 
-.hidden{
-  opacity: 0;
-}
 
 .hiddenNombre{
   transform: translateX(-33%);

@@ -1,6 +1,9 @@
 ---
 import IndexLayout from '../layouts/IndexLayout.astro'
 import Sparkle from '../components/sparkle.astro'
+import CVSocialLink from '../components/socialLinks/CVSocialLink.astro'
+import GithubSocialLink from '../components/socialLinks/GithubSocialLink.astro'
+import LinkedinSocialLink from '../components/socialLinks/LinkedinSocialLink.astro'
 
 const nombre = "Martín López de Ipiña"
 ---
@@ -17,20 +20,14 @@ const nombre = "Martín López de Ipiña"
 			<div class="divSparkles fadeInSparkles">
 				<Sparkle/>
 			</div>
-			<div class="divFoto fadeInRightFoto">
-				<img src="/img/foton.jpeg" class="foto">
-				<a href="https://www.linkedin.com/in/Mart%C3%ADnL%C3%B3pezDeIpi%C3%B1aMu%C3%B1oz/" class="socialLink fadeInSocialLinks delayLinkedin">
-					<img src="/svg/linkedin.svg" class="circle circleLinkedin">
-				</a>
-				<a href="https://github.com/MartinLopezDeIpina" class="socialLink fadeInSocialLinks delayGithub">
-					<img src="/svg/github-mark.svg" class="circle circleGithub">
-				</a>
-				<a class="socialLink fadeInSocialLinks delayCV">
-					<div class="circle containerCV">
-						<img src="/svg/cv.svg" class="circleCV">
+				<div class="divFoto fadeInRightFoto">
+					<img src="/img/foton.jpeg" class="foto">
+					<div class="divSocialLinks">
+						<GithubSocialLink />
+						<LinkedinSocialLink />
+						<CVSocialLink />
 					</div>
-				</a>
-			</div>
+				</div>
 		</div>
 	</div>
 	<div class="divSubtitulo">
@@ -47,6 +44,14 @@ const nombre = "Martín López de Ipiña"
 </IndexLayout>
 
 <style>
+
+	.divSocialLinks{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%
+	}
 
 	.fadeInLeftNombre{
 		animation: faseInLeft 1s ease;
@@ -81,13 +86,13 @@ const nombre = "Martín López de Ipiña"
 	}
 
 	.fadeInSubtitulo1{
-		animation: faseInBlur 0.6s ease;
+		animation: faseInBlur 0.8s ease;
 		opacity:0;
 		animation-fill-mode: forwards;
 		animation-delay: 300ms;
 	}
 	.fadeInSubtitulo2{
-		animation: faseInBlur 0.6s ease;
+		animation: faseInBlur 0.8s ease;
 		opacity:0;
 		animation-fill-mode: forwards;
 		animation-delay: 400ms;
@@ -97,20 +102,6 @@ const nombre = "Martín López de Ipiña"
 		animation-delay: 0.5s;
 		opacity:0;
 		animation-fill-mode: forwards;
-	}
-	.fadeInSocialLinks{
-		opacity:0;
-		animation: faseInBlur 0.5s ease;
-		animation-fill-mode: forwards;
-	}
-	.delayGithub{
-		animation-delay: 0.5s;
-	}
-	.delayLinkedin{
-		animation-delay: 0.6s;
-	}
-	.delayCV{
-		animation-delay: 0.7s;
 	}
 	@keyframes faseInBlur{
 		from{
@@ -182,7 +173,6 @@ const nombre = "Martín López de Ipiña"
 
 	.foto {
 		box-shadow: 0 0 15px white;
-		z-index: 2;
 		border-radius: 50%;
 		width: 225px;
 		height: 225px;
@@ -192,63 +182,6 @@ const nombre = "Martín López de Ipiña"
 		transition: 0.3s;
 		box-shadow: 0 0 25px #bb9af7;
 	}
-
-	.circle {
-		width: 55px;
-		height: 55px;
-		border-radius: 50%;
-		overflow:hidden;
-	}
-	.circle:hover{
-		transition: 0.3s;
-		transform: scale(1.1);
-	}
-	.circleGithub{
-		background-color:#1a1b26 ;
-	}
-	.circleGithub:hover{
-		box-shadow : 0 0 15px #5c3791;
-	}
-	.containerCV{
-		display:flex;
-		justify-content: center;
-		overflow:hidden;
-	}
-	.circleCV{
-		background-color:#FF4D4D;
-		padding: 7px;
-	}
-	.containerCV:hover{
-		box-shadow : 0 0 15px #9e2929;
-	}
-	.circleLinkedin{
-		background-color:#1a1b26 ;
-	}
-	.circleLinkedin:hover{
-		box-shadow : 0 0 15px #054a6b;
-	}
-
-	.socialLink{
-		z-index: 3;
-		position:absolute;
-	}
-	.socialLink img{
-		box-sizing: border-box;
-		border:none;
-	}
-	.socialLink:nth-child(2) {
-		bottom: -18%;
-		transform-origin:bottom middle;
-	}
-	.socialLink:nth-child(3) {
-		bottom: -3%;
-		left: 0;
-	}
-	.socialLink:nth-child(4) {
-		bottom:-3%;
-		right: 0;
-	}
-
 
 	.divNombre {
 		display: flex;

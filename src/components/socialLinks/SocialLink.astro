@@ -1,0 +1,73 @@
+---
+
+let link = Astro.props.link;
+let iconName = Astro.props.iconName;
+let offset = Astro.props.offset;
+let backgroundColor = Astro.props.backgroundColor !== undefined ? `#${Astro.props.backgroundColor}` : "#1a1b26";
+let hoverColor = `#${Astro.props.hoverColor}`;
+let left = Astro.props.left;
+let right = Astro.props.right;
+let bottom = Astro.props.bottom;
+let middle = Astro.props.middle;
+
+let iconLink = `/svg/${iconName}.svg`; 
+
+---
+					
+<a href={link} class="socialLink fadeInSocialLinks" style=`--offset:${offset};`>
+    <img src={iconLink} class="circle" style=`--backgroundColor:${backgroundColor}; --hoverColor:${hoverColor};`>
+</a>
+
+<style>
+  	.socialLink:nth-child(2) {
+		bottom: -18%;
+        left:50%;
+        transform: translateX(-50%);
+    	}
+
+	.socialLink:nth-child(1) {
+		bottom: -3%;
+		left: 0;
+	}
+	.socialLink:nth-child(3) {
+		bottom:-3%;
+		right: 0;
+	}
+    .circle {
+		position:relative;
+		width: 55px;
+		height: 55px;
+		border-radius: 50%;
+		overflow:hidden;
+		background-color: var(--backgroundColor);
+	}
+	.circle:hover{
+		transition: 0.3s;
+		transform: scale(1.1);
+		box-shadow : 0 0 15px var(--hoverColor);
+	}
+	.socialLink{
+		z-index:10;
+		position:absolute;
+	}
+	.socialLink img{
+		box-sizing: border-box;
+		border:none;
+	}
+	.fadeInSocialLinks{
+		opacity:0;
+		animation: fadeInBlur 1s ease;
+		animation-fill-mode: forwards;
+        animation-delay: calc(0.4s + 0.1s * var(--offset));
+	}
+	@keyframes fadeInBlur{
+		from{
+			opacity: 0;
+			filter:blur(2px);
+		}
+		to{
+			opacity: 1;
+			filter:blur(0px);
+		}
+	}
+</style>

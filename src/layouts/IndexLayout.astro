@@ -15,11 +15,10 @@ const { tituloPagina } = Astro.props;
     <title>{tituloPagina}</title>
 </head>
 <body>
-    <header>
-        <Header/>
-    </header>
+    <Header/>
     <slot />    
     <Footer />
+    <script src="/src/scripts/socialLinks.js"></script>
 </body>
 <style is:global>
     body {
@@ -31,16 +30,6 @@ const { tituloPagina } = Astro.props;
 <style>
     html{
         min-height: 200%;
-    }
-    header{
-        padding-top:30px;
-        padding-bottom: 10px;
-        margin-bottom:40px;
-        position:sticky;
-        top:0;
-        z-index: 1000;
-
-        background-color: #15151d;
     }
 	body{
 		width:75%;
