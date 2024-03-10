@@ -20,12 +20,14 @@ const nombre = "Martín López de Ipiña"
 			<div class="divSparkles fadeInSparkles">
 				<Sparkle/>
 			</div>
+			<div class="divFotoSocialLinks">
 				<div class="divFoto fadeInRightFoto">
 					<img src="/img/foton.jpeg" class="foto">
-					<GithubSocialLink />
-					<LinkedinSocialLink />
-					<CVSocialLink />
 				</div>
+				<GithubSocialLink />
+				<LinkedinSocialLink />
+				<CVSocialLink />
+			</div>
 		</div>
 	</div>
 	<div class="divSubtitulo">
@@ -153,10 +155,13 @@ const nombre = "Martín López de Ipiña"
 
 	.divFoto{
 		position:relative;
-		margin-top:40px;	
 		display: flex;
 		display:flex;
 		justify-content: center;
+	}
+	.divFotoSocialLinks{
+		position:relative;
+		margin-top:40px;	
 	}
 
 
