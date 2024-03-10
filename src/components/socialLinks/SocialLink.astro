@@ -14,7 +14,7 @@ let iconLink = `/svg/${iconName}.svg`;
 
 ---
 					
-<a href={link} class="socialLink fadeInSocialLinks" style=`--offset:${offset};`>
+<a href={link} class="socialLink fadeInSocialLinks fadeInRightSocialLink" style=`--offset:${offset};`>
     <img src={iconLink} class="circle" style=`--backgroundColor:${backgroundColor}; --hoverColor:${hoverColor};`>
 </a>
 
@@ -34,11 +34,9 @@ let iconLink = `/svg/${iconName}.svg`;
 		right: 0;
 	}
     .circle {
-		position:relative;
 		width: 55px;
 		height: 55px;
 		border-radius: 50%;
-		overflow:hidden;
 		background-color: var(--backgroundColor);
 	}
 	.circle:hover{
@@ -49,6 +47,7 @@ let iconLink = `/svg/${iconName}.svg`;
 	.socialLink{
 		z-index:10;
 		position:absolute;
+
 	}
 	.socialLink img{
 		box-sizing: border-box;
@@ -58,7 +57,7 @@ let iconLink = `/svg/${iconName}.svg`;
 		opacity:0;
 		animation: fadeInBlur 1s ease;
 		animation-fill-mode: forwards;
-        animation-delay: calc(0.4s + 0.1s * var(--offset));
+        animation-delay: calc(0.5s + 0.1s * var(--offset));
 	}
 	@keyframes fadeInBlur{
 		from{

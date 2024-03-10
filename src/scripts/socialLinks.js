@@ -1,19 +1,44 @@
-window.addEventListener('scroll', function() {
-  let header = document.querySelector('header'); 
-  let socialLinks = document.querySelectorAll('.socialLink');
-  let headerRect = header.getBoundingClientRect();
-  
-  socialLinks.forEach(function(socialLink) {
-    let socialLinkRect = socialLink.getBoundingClientRect();
-    
-    if (headerRect.bottom > socialLinkRect.top && headerRect.top < socialLinkRect.bottom) {
-      // El encabezado está pasando por encima del enlace social
-      //socialLink.style.position = 'fixed';
-      //socialLink.style.top = '0'; // Esto hará que los enlaces se queden pegados en la parte superior cuando el encabezado pase por encima de ellos
+let socialLinks = document.querySelectorAll('.socialLink');
+
+socialLinks.forEach((socialLink) => {
+
+  let marginTop = 17;
+
+  let originalTop = socialLink.getBoundingClientRect().top + window.scrollY;
+  let originalLeft = socialLink.getBoundingClientRect().left + window.scrollX;
+
+  let estiloSocialLink = window.getComputedStyle(socialLink);
+  let offset = estiloSocialLink.getPropertyValue('--offset');
+  if(offset == 2){ // en caso de que sea linkedin habrá que añadirle un 50% más de left 
+                   //porque está puesto en el CSS con la propiedad transform y no tiene en cuenta el left
+    originalLeft = originalLeft + socialLink.offsetWidth/2;
+  }
+
+  let container = document.querySelector('.divFotoSocialLinks');
+  let topContainer = container.getBoundingClientRect().top + window.scrollY;
+  let leftContainer = container.getBoundingClientRect().left + window.scrollX;
+
+  //si al principio ya está arriba del 0, ponerlo en el 0
+  if(socialLink.getBoundingClientRect().top < marginTop){
+      socialLink.style.position = 'fixed';
+      socialLink.style.top = `${marginTop}px`;
+      socialLink.style.left = originalLeft + 'px'; // Mantén el eje X
+  }
+
+  window.addEventListener('scroll', function() {
+    var scrollPosition = document.documentElement.scrollTop;
+
+    if (scrollPosition > originalTop-marginTop) { 
+      socialLink.style.position = 'fixed';
+      socialLink.style.top = `${marginTop}px`;
+      socialLink.style.left = originalLeft + 'px'; // Mantén el eje X
     } else {
-      // El encabezado no está pasando por encima del enlace social
+      let top = originalTop - topContainer;
+      let left = originalLeft - leftContainer;
+      
       socialLink.style.position = 'absolute';
-      socialLink.style.top = ''; // Esto hará que los enlaces vuelvan a su posición original cuando el encabezado no esté pasando por encima de ellos
+      socialLink.style.top = top + 'px'; // Restaura la posición original del eje Y
+      socialLink.style.left = left + 'px'; // Restaura la posición original del eje X
     }
   });
 });

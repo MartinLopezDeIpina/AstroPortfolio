@@ -20,7 +20,7 @@ const nombre = "Martín López de Ipiña"
 			<div class="divSparkles fadeInSparkles">
 				<Sparkle/>
 			</div>
-			<div class="divFotoSocialLinks">
+			<div class="divFotoSocialLinks ">
 				<div class="divFoto fadeInRightFoto">
 					<img src="/img/foton.jpeg" class="foto">
 				</div>
@@ -62,14 +62,14 @@ const nombre = "Martín López de Ipiña"
 	}
 
 	.fadeInRightFoto{
-		animation: faseInRight 1s ease;
+		animation: faseInRight 0.8s ease;
 		opacity:0;
 		animation-fill-mode: forwards;
 	}
 	@keyframes faseInRight{
 		from{
 			opacity: 0;
-			transform: translateX(50%);
+			transform: translateX(33%);
 		}
 		to{
 			opacity: 1;
@@ -154,7 +154,6 @@ const nombre = "Martín López de Ipiña"
 	}
 
 	.divFoto{
-		position:relative;
 		display: flex;
 		display:flex;
 		justify-content: center;
