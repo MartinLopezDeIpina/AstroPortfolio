@@ -1,0 +1,56 @@
+---
+let nombre = Astro.props.nombre;
+---
+
+<div class="divTerminal">
+    <img class="icono" src="/svg/ubuntu.svg">
+    <div class="divLinea"></div>
+    <h2><span>martin:~/</span>{nombre}<span>$</span></h2>
+</div>
+
+<style>
+
+    .divLinea{
+        margin-top:-4px;
+        margin-right:32px;
+        width: 2px;
+        height: 40px;
+        background-color: #808080;
+        transform: rotate(45deg);
+    }
+    .icono{
+        width:40px;
+        height: 40px;
+        margin-top: -3px;
+        margin-right:10px;
+        padding-right: 10px;
+        margin-left:-10px;
+    }
+
+    .divTerminal{
+        background-image: url("/svg/flecha2.svg");
+        background-size: 540px;
+        padding-left: 50px;
+        margin-bottom: 50px;
+
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: center;
+
+        width: fit-content;
+
+    }
+    .divTerminal h2{
+        margin-top:-5px;
+        padding-right: 45px;
+        margin-left:-5px;
+    }
+    h2{
+        margin:0px;
+        font-size: 32px;
+    }
+    span{
+        font-weight: bold;
+        color: #71d7c7;
+    }
+</style>

@@ -1,55 +1,17 @@
 ---
 import Proyecto from "./Proyecto.astro"
+import H2 from "../H2.astro"
 
-let alturaH2 = 42;
 ---
 
 <div class="divProyectosGeneral">
+    <H2 nombre="Proyectos" />
     <div class="divProyectos">
-        <div class="divTerminal">
-            <img class="icono" src="/svg/ubuntu.svg">
-            <div class="divLinea"></div>
-            <h2><span>martin:~/</span>Proyectos<span>$</span></h2>
-        </div>
         <Proyecto /> 
     </div>
 </div>
 
 <style>
-    .divLinea{
-        margin-top:-4px;
-        margin-right:32px;
-        width: 2px;
-        height: 40px;
-        background-color: #808080;
-        transform: rotate(45deg);
-    }
-    .icono{
-        width:40px;
-        height: 40px;
-        margin-top: -3px;
-        margin-right:10px;
-        padding-right: 10px;
-        margin-left:-10px;
-    }
-
-    .divTerminal{
-        background-image: url("/svg/flecha2.svg");
-        background-size: 540px;
-        padding-left: 50px;
-        padding-right: 100px;
-        margin-bottom: 50px;
-
-        background-repeat: no-repeat;
-        display: flex;
-        align-items: center;
-        
-    }
-    .divTerminal h2{
-        margin-top:-5px;
-        padding-right: 45px;
-        margin-left:-5px;
-    }
 
 
 
@@ -62,13 +24,5 @@ let alturaH2 = 42;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    h2{
-        margin:0px;
-        font-size: 32px;
-    }
-    span{
-        font-weight: bold;
-        color: #00FF00;
     }
 </style>
