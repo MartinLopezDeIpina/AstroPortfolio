@@ -1,0 +1,21 @@
+---
+
+let nombre = Astro.props.nombre;
+
+let url = `/svg/tech/${nombre.toLowerCase()}.svg`;
+---
+<img src={url} title={nombre}>
+
+<style>
+    img {
+        width: 60px;
+        height: 60px;
+    }
+
+    img:hover {
+        transform: scale(1.15);
+        transition: all 0.2s ease;
+    }
+
+</style>
+

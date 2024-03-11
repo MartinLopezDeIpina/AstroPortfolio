@@ -1,0 +1,68 @@
+---
+let nombre = Astro.props.nombre;
+let descripcion = Astro.props.descripcion;
+let comentarios = Astro.props.comentarios;
+let tecnologias = Astro.props.tecnologias;
+---
+
+<div class="divProyecto">
+    <img >
+    <p>Right arrow: <i class="arrow right"></i></p>
+    <p>Left arrow: <i class="arrow left"></i></p>
+    <p>Up arrow: <i class="arrow up"></i></p>
+    <p>Down arrow: <i class="arrow down"></i></p> 
+</div>
+
+<style>
+    .divProyecto{
+        height: 300px;
+        width: 100vh;
+
+        box-sizing: border-box;
+        line-height: 1.5;
+        border-radius: 15px;
+        box-shadow: 0 2px 6px #0006;
+        background-color:#1a1b26;
+        border: 1px solid #0f1214;
+    }
+    .divProyecto:hover{
+        transform: scale(1.01);
+        transition: all 0.2s ease;
+    }
+.divConPunta {
+    margin-left: 50px;
+    position: relative;
+    width: 200px;
+    height: 100px;
+    background-color: #555;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+
+</style>

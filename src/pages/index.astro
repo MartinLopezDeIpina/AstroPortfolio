@@ -1,11 +1,14 @@
 ---
-import IndexLayout from '../layouts/IndexLayout.astro'
-import Sparkle from '../components/sparkle.astro'
-import CVSocialLink from '../components/socialLinks/CVSocialLink.astro'
-import GithubSocialLink from '../components/socialLinks/GithubSocialLink.astro'
-import LinkedinSocialLink from '../components/socialLinks/LinkedinSocialLink.astro'
+import IndexLayout from '../layouts/IndexLayout.astro';
+import Sparkle from '../components/sparkle.astro';
+import CVSocialLink from '../components/socialLinks/CVSocialLink.astro';
+import GithubSocialLink from '../components/socialLinks/GithubSocialLink.astro';
+import LinkedinSocialLink from '../components/socialLinks/LinkedinSocialLink.astro';
+import Proyecto from '../components/proyectos/Proyecto.astro';
+import Tecnologia from '../components/Tecnologia.astro';
+import Proyectos from '../components/proyectos/Proyectos.astro';
 
-const nombre = "Martín López de Ipiña"
+const nombre = "Martín López de Ipiña";
 ---
 
 <IndexLayout tituloPagina="Martín">
@@ -32,12 +35,15 @@ const nombre = "Martín López de Ipiña"
 	</div>
 	<div class="divSubtitulo">
 		<div class="divAuxiliarSubtitulo">
-			<h3 class="h3SubTitulo subtitulo fadeInSubtitulo1">Ingeniero de Software centrado en tecnologías backend<span class="pVerde">~$</span></h3>
+			<p class="h3SubTitulo subtitulo fadeInSubtitulo1">Ingeniero de Software centrado en tecnologías backend<span class="pVerde">~$</span></p>
 			<div class="subtitulo">
 				<p class="fadeInSubtitulo2">Actualmente estoy cursando el tercer curso del grado de<span class="pRojo"> Ingeniería Informática </span>en la <span class="pRojo">UPV/EHU</span>. Especializado en Ingeniería de Software. </p>
 			</div>
 		</div>
 	</div>
+</div>
+<div>
+	<Proyectos />
 </div>
 
 
@@ -205,6 +211,7 @@ const nombre = "Martín López de Ipiña"
 
 	.h3SubTitulo {
 		margin-bottom: 20x;
+		margin-top:50px;
 		font-weight: bold;
 		/*color:#43b843;*/
 		color: #bb9af7;
