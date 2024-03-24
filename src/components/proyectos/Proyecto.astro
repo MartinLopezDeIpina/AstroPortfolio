@@ -1,19 +1,36 @@
 ---
+import Tecnologia from "../Tecnologia.astro";
+
 let nombre = Astro.props.nombre;
 let descripcion = Astro.props.descripcion;
 let comentarios = Astro.props.comentarios;
 let tecnologias = Astro.props.tecnologias;
+let urlImagen = Astro.props.urlImagen;
 ---
 
 <div class="divProyecto">
+    <img class="imgProyecto" src={urlImagen}>
+    <div class="divDescripcion">
+        <h3>{nombre}</h3>
+        <p>{descripcion}</p>
+        <a>Github</a>
+        <div class="divTecnologias">
+            {tecnologias.map(tec =>{
+                return <Tecnologia nombre={tec}/>
+            })}
+        </div>
+    </div>
 </div>
 
 <style>
     .divProyecto{
-        height: 300px;
-        width: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        box-sizing: border-box;
+        height: 300px;
+        width: 65%;
+
         line-height: 1.5;
         border-radius: 15px;
         box-shadow: 0 2px 6px #0006;
@@ -21,8 +38,41 @@ let tecnologias = Astro.props.tecnologias;
         border: 1px solid #0f1214;
     }
     .divProyecto:hover{
-        transform: scale(1.01);
-        transition: all 0.2s ease;
+        border: 3px solid #3b2d4b;
+        margin:-2px;
+    }
+
+    .divDescripcion{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-inline: 25px;
+    }
+
+
+    .imgProyecto{
+        height: 200px;
+        width: 200px;
+        margin: 25px;
+        
+    }
+
+    h3{
+        font-size:32px;
+        margin:0;
+        color: #bb9af7;
+        font-weight: bold;
+    }
+
+    .divTecnologias{
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    a{
+        text-decoration: none;
+        font-size: 20px;
     }
 
 </style>

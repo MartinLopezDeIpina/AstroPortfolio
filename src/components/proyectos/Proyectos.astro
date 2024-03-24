@@ -5,24 +5,80 @@ import H2 from "../H2.astro"
 ---
 
 <div class="divProyectosGeneral">
-    <H2 nombre="Proyectos" />
     <div class="divProyectos">
-        <Proyecto /> 
+        <div class="divTerminal">
+            <img class="svgTerminal" src="/svg/terminal/flecha.svg">
+            <div class="text"></div>
+        </div>
+        <Proyecto urlImagen="/img/matt.png" nombre="ProyectoA" descripcion="esta es una descripción del proyecto, tiene que ser un poco largapa que ocupe varias líneas pq sino pues pel"
+        tecnologias={["java","javafx","mysql"]}/> 
     </div>
 </div>
 
 <style>
 
-
-
-
     .divProyectosGeneral{
-        margin-top:15vh;
+        margin-top:14vh;
     }
     .divProyectos{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    .divTerminal{
+        width:100%;
+        display: flex;
+        margin-bottom: 50px;
+        align-self: left;
+        left:0;
+
+    }
+
+    .svgTerminal{
+        width:555.57px;
+        height:42.2px;
+        margin-right: 10px;
+    }
+
+
+    .text { 
+        position:relative;
+    }
+
+    .text::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -15px;
+        /* Remove display: inline-block if not required to be on the same line as text etc */
+        display: inline-block;
+        background-color: #606060;
+        vertical-align: top;
+        width: 10px;
+        /* Set height to the line height of .text */
+        height: 37.8px;
+        /* 
+        Animation paramaters:
+        blink = animation-name, 
+        1s = animation-duration, 
+        step-end = animation-timing-function,
+        infinite = animation-iteration-count
+        */
+        -webkit-animation: blink 1s step-end infinite;
+        animation: blink 1s step-end infinite;
+    }
+
+    @-webkit-keyframes blink {
+        0% { opacity: 1.0; }
+        50% { opacity: 0.0; }
+        100% { opacity: 1.0; }
+    }
+
+    @keyframes blink {
+        0% { opacity: 1.0; }
+        50% { opacity: 0.0; }
+        100% { opacity: 1.0; }
     }
 </style>
