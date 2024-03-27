@@ -1,8 +1,10 @@
+@import url('/themes/redTheme/dark.css');
+@import url('/themes/redTheme/light.css');
+
 html{
-  color:aliceblue;
   /*background-color:#111114;*/
   /*background-color: #212121;*/
-  background-color:#15151d;
+  background-color: var(--md-sys-color-surface);
   display: flex;
   justify-content: center;
 }
@@ -18,3 +20,6 @@ h2{
     color: #c45e72;
 }
 
+p{
+  color: var(--md-sys-color-on-surface-variant);
+}
