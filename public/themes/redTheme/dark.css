@@ -7,12 +7,13 @@
      --color-primary-500:  #e89c8c;
      --color-primary-600:  #eeafa2;
 
-     /** CSS DARK THEME PRIMARY COLORS */
-     --color-primary-100:  #689775;
-     --color-primary-200:  #78a283;
-     --color-primary-300:  #89ae92;
-     --color-primary-400:  #99b9a1;
-     --color-primary-500:  #aac4b0;
+     /** CSS DARK THEME tertiary COLORS */
+     --color-tertiary-100:  #689775;
+     --color-tertiary-200:  #78a283;
+     --color-tertiary-300:  #89ae92;
+     --color-tertiary-400:  #99b9a1;
+     --color-tertiary-500:  #aac4b0;
+      --color-tertiary-600:  #bbd0bf;
 
     /** CSS DARK THEME SURFACE COLORS */
      --color-surface-100:  #121212;
@@ -29,5 +30,7 @@
      --color-surface-mixed-400:  #655c5a;
      --color-surface-mixed-500:  #7d7573;
      --color-surface-mixed-600:  #958f8d;
+
+     --color-on-surface: #ffffff;
  
 }

@@ -1,3 +1,4 @@
+
 ---
 
 let link = Astro.props.link;
@@ -28,8 +29,11 @@ let iconLink = `/svg/${iconName}.svg`;
 
 <style>
 	svg{
-		fill: var(--color-surface-200);
+		fill: var(--color-surface-400);
 	}
+    svg:hover{
+        fill: var(--color-primary-600);
+    }
   	.socialLink:nth-child(3) {
 		bottom: -18%;
         left:50%;
@@ -48,14 +52,13 @@ let iconLink = `/svg/${iconName}.svg`;
 		width: 55px;
 		height: 55px;
 		border-radius: 50%;
-		background-color: var(--color-surface-400);
+		background-color: var(--color-surface-200);
 		border: 2px solid var(--color-surface-400);
 	}
 	.circle:hover{
 		transition: 0.3s;
 		transform: scale(1.1);
 		box-shadow : 0 0 15px var(--hoverColor);
-		background-color: var(--color-primary-600);
 	}
 	.socialLink{
 		z-index:10;
