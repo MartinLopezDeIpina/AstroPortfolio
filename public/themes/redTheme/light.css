@@ -1,0 +1,32 @@
+.light{
+    /** CSS LIGHT THEME PRIMARY COLORS */
+     --color-primary-100:  #38b6c5;
+     --color-primary-200:  #2fa1b1;
+     --color-primary-300:  #268b9d;
+     --color-primary-400:  #1d7689;
+     --color-primary-500:  #146173;
+     --color-primary-600:  #0b4c5d;
+
+     /** CSS LIGHT THEME PRIMARY COLORS */
+     --color-primary-100:  #97688a;
+     --color-primary-200:  #877d7c;
+     --color-primary-300:  #786f6e;
+     --color-primary-400:  #686260;
+     --color-primary-500:  #595552;
+
+    /** CSS LIGHT THEME SURFACE COLORS */
+     --color-surface-100:  #edede3;
+     --color-surface-200:  #d7d7d6;
+     --color-surface-300:  #c0c0c9;
+     --color-surface-400:  #a8a8bc;
+     --color-surface-500:  #9191af;
+     --color-surface-600:  #7a7aa2;
+    
+    /** CSS LIGHT THEME MIXED SURFACE COLORS */
+     --color-surface-mixed-100:  #dce6e9;
+     --color-surface-mixed-200:  #c7d1d4;
+     --color-surface-mixed-300:  #b1bbbe;
+     --color-surface-mixed-400:  #9ba6a8;
+     --color-surface-mixed-500:  #85918c;
+     --color-surface-mixed-600:  #6f7c70;
+}
