@@ -12,10 +12,11 @@ let invertido = Astro.props.invertido;
 ---
 					
 <a href={link} class="socialLink fadeInSocialLinks fadeInRightSocialLink" style=`--offset:${offset};`>
-	<svg class=`circle ${invertido ? 'circleInvertido SVGInvertido' : 'circleNoInvertido SVGNoInvertido'}` xmlns="http://www.w3.org/2000/svg" width={svgWidth} height={svgHeight} viewBox={viewbox}>
-		<path d={path}/>
-	</svg>
-
+	<div class="divAuxiliarBugFirefox">
+		<svg class=`circle ${invertido ? 'circleInvertido SVGInvertido' : 'circleNoInvertido SVGNoInvertido'}` xmlns="http://www.w3.org/2000/svg" width={svgWidth} height={svgHeight} viewBox={viewbox}>
+			<path d={path}/>
+		</svg>
+	</div>
 </a>
 
 <style>
@@ -39,8 +40,10 @@ let invertido = Astro.props.invertido;
 		border-radius: 50%;
 	}
 	.circle:hover{
-		transition: 0.3s;
+		transition:  0.5s;
 		transform: scale(1.1);
+	}
+	.divAuxiliarBugFirefox:hover{
 	}
 	.circleNoInvertido{
 		background-color: var(--color-surface-400);

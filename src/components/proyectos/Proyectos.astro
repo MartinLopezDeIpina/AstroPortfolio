@@ -7,16 +7,23 @@ import H2 from "../H2.astro"
 <div class="divProyectosGeneral">
     <div class="divProyectos">
         <div class="divTerminal">
-            <img class="svgTerminal" src="/svg/terminal/flecha.svg">
+            <h3>martin:~/<span>Proyectos</span>$</h3>
             <div class="text"></div>
         </div>
-        <Proyecto urlImagen="/img/matt.png" nombre="ProyectoA" descripcion="esta es una descripción del proyecto, tiene que ser un poco largapa que ocupe varias líneas pq sino pues pel"
+        <Proyecto urlImagen="/img/ajedrez.jpeg" nombre="ProyectoA" descripcion="esta es una descripción del proyecto, tiene que ser un poco largapa que ocupe varias líneas pq sino pues pel y pues un poco más sabes"
         tecnologias={["java","javafx","mysql"]}/> 
     </div>
 </div>
 
 <style>
-
+    span{
+        color: var(--color-primary-100);
+    }
+    h3{
+        font-size:42px;
+        font-weight: bold;
+        color: var(--color-tertiary-100);
+    }
     .divProyectosGeneral{
         margin-top:14vh;
     }
@@ -30,10 +37,11 @@ import H2 from "../H2.astro"
     .divTerminal{
         width:100%;
         display: flex;
+        align-items: center;
         margin-bottom: 50px;
         align-self: left;
         left:0;
-
+        gap:10px;
     }
 
     .svgTerminal{
@@ -49,6 +57,7 @@ import H2 from "../H2.astro"
 
     .text::after {
         content: "";
+        transform: translateY(-50%);
         position: absolute;
         top: 0;
         right: -15px;
