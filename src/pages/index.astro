@@ -5,8 +5,10 @@ import CVSocialLink from '../components/socialLinks/CVSocialLink.astro';
 import GithubSocialLink from '../components/socialLinks/GithubSocialLink.astro';
 import LinkedinSocialLink from '../components/socialLinks/LinkedinSocialLink.astro';
 import Proyecto from '../components/proyectos/Proyecto.astro';
-import Tecnologia from '../components/Tecnologia.astro';
+import Tecnologia from '../components/Tecnologias/Tecnologia.astro';
 import Proyectos from '../components/proyectos/Proyectos.astro';
+import Conocimientos from '../components/Conocimientos.astro';
+import Seccion from '../components/Seccion.astro';
 
 const nombre = "Martín López de Ipiña";
 ---
@@ -35,7 +37,7 @@ const nombre = "Martín López de Ipiña";
 	</div>
 	<div class="divSubtitulo">
 		<div class="divAuxiliarSubtitulo">
-			<p class="h3SubTitulo subtitulo fadeInSubtitulo1">Ingeniero de Software centrado en tecnologías backend<span class="pVerde">~$</span></p>
+			<p class="h3SubTitulo subtitulo fadeInSubtitulo1">Ingeniero de Software centrado en tecnologías backend<span class="pVerde"></span></p>
 			<div class="subtitulo">
 				<p class="fadeInSubtitulo2">Actualmente estoy cursando el tercer curso del grado de<span class="pRojo"> Ingeniería Informática </span>en la <span class="pRojo">UPV/EHU</span>. Especializado en Ingeniería de Software. </p>
 			</div>
@@ -43,7 +45,11 @@ const nombre = "Martín López de Ipiña";
 	</div>
 </div>
 <div>
-	<Proyectos />
+	<Seccion nombreSeccion="Proyectos"/>
+	<Seccion nombreSeccion="Conocimientos" />
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 
 
@@ -130,10 +136,6 @@ const nombre = "Martín López de Ipiña";
 		font-weight: bold;
 		color:var(--color-primary-100);
 	}
-	.pRojo{
-		color: var(--color-primary-100);
-		font-weight: bold;
-	}
 
 	h1{
 		margin-bottom: 0px;
@@ -219,9 +221,7 @@ const nombre = "Martín López de Ipiña";
 	}
 
 	p{
-		font-size: 24px;
 		margin-top: 0px;
-
 	}
 
 

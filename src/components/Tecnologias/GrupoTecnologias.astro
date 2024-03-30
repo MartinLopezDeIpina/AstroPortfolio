@@ -1,0 +1,46 @@
+---
+import Tecnologia from './Tecnologia.astro';
+
+let tecnologias = Astro.props.tecnologias; 
+let titulo = Astro.props.titulo;
+let clase = Astro.props.class;
+---
+
+
+<div class=`grupo ${clase}`>
+    <h3>{titulo}</h3>
+    <div class="divTecnologias">
+        {tecnologias.map(tec =>{
+            return <Tecnologia nombre={tec}/>
+        })}
+    </div>
+</div>
+
+<style>
+    .grupo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+
+        background-color: var(--color-surface-150);
+        padding: 25px;
+        border-radius:5px;
+        width: 500px;
+        height: 189px;
+    }
+    .divTecnologias{
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        
+        margin: auto;
+    }
+    h3{
+        align-self: flex-start;
+        margin: 0;
+    }
+</style>

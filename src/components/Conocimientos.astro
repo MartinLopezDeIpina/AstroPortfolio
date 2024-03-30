@@ -1,0 +1,30 @@
+---
+import GrupoTecnologias from "./Tecnologias/GrupoTecnologias.astro"
+---
+
+<div class="divIntro">
+    <p>Pese a que mi intención es especializarme en tecnologías <span class="pRojo">backend</span>, estoy abierto a usar todo tipo de herramientas.</p>
+</div>
+<div class="divGrupoTecnologias">
+    <GrupoTecnologias class="fadeInLeft" titulo="Lenguajes" tecnologias={["Java", "Python", "SQL", "HTML", "CSS", "JavaScript", "XML", "VisualBasic", "Shell Script", "Vimscript"]} />
+    <GrupoTecnologias class="fadeInRight" titulo="Frameworks" tecnologias={["JavaFX", "Java Server Faces", "Django", "ExpressJS", "NodeJS", "Astro"]} />
+    <GrupoTecnologias class="fadeInLeft" titulo="BD" tecnologias={["MySQL", "SQLDeveloper", "Hibernate", "MongoDB", "Firebase"]} />
+    <GrupoTecnologias class="fadeInRight" titulo="Herramientas" tecnologias={["Linux", ".NET", "Android", "Figma"]} />
+</div>
+
+<style>
+    p{
+        margin-top: -25px;
+        margin-bottom: 50px;
+    }
+    .divIntro{
+        max-width: 60%;
+    }
+    .divGrupoTecnologias{
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        gap: 25px;
+    }
+
+</style>

@@ -1,0 +1,96 @@
+---
+import Proyectos from "./proyectos/Proyectos.astro";
+import Conocimientos from "./Conocimientos.astro";
+
+let nombreSeccion = Astro.props.nombreSeccion;
+let Componente;
+
+switch (nombreSeccion) {
+    case "Proyectos":
+        Componente = Proyectos;
+        break;
+    case "Conocimientos":
+        Componente = Conocimientos;
+        break;
+    default:
+        Componente = null;
+        break;
+}
+---
+
+<div class="divTerminal">
+    <h3>martin:~/<span>{nombreSeccion}</span>$</h3>
+    <div class="text"></div>
+</div>
+<Componente />
+
+<style>
+
+    span{
+        color: var(--color-primary-100);
+    }
+    h3{
+        font-size:42px;
+        font-weight: bold;
+        color: var(--color-tertiary-100);
+    }
+
+    .divTerminal{
+        width:100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        margin-top: 150px;
+        align-self: left;
+        left:0;
+        gap:10px;
+    }
+
+    .svgTerminal{
+        width:555.57px;
+        height:42.2px;
+        margin-right: 10px;
+    }
+
+
+    .text { 
+        position:relative;
+    }
+
+    .text::after {
+        content: "";
+        transform: translateY(-50%);
+        position: absolute;
+        top: 0;
+        right: -15px;
+        /* Remove display: inline-block if not required to be on the same line as text etc */
+        display: inline-block;
+        background-color: #606060;
+        vertical-align: top;
+        width: 10px;
+        /* Set height to the line height of .text */
+        height: 37.8px;
+        /* 
+        Animation paramaters:
+        blink = animation-name, 
+        1s = animation-duration, 
+        step-end = animation-timing-function,
+        infinite = animation-iteration-count
+        */
+        -webkit-animation: blink 1s step-end infinite;
+        animation: blink 1s step-end infinite;
+    }
+
+    @-webkit-keyframes blink {
+        0% { opacity: 1.0; }
+        50% { opacity: 0.0; }
+        100% { opacity: 1.0; }
+    }
+
+    @keyframes blink {
+        0% { opacity: 1.0; }
+        50% { opacity: 0.0; }
+        100% { opacity: 1.0; }
+    }
+
+</style>

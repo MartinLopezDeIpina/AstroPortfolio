@@ -10,9 +10,10 @@ html{
 }
 
 h3{
-    font-weight: normal;
-    /*color:#43b843;*/
-    color:#00e400;
+  color: var(--color-on-surface);
+  font-size: 28px;
+  font-weight: bold;
+  /*color:#00e400;*/
 }
 
 h2{
@@ -22,4 +23,45 @@ h2{
 
 p{
   color: var(--color-on-surface);
+	font-size: 24px;
 }
+
+.pRojo{
+  color: var(--color-primary-100);
+  font-weight: bold;
+}
+
+.fadeInRight, .fadeInLeft{
+  opacity: 0;
+}
+
+.activeLeft{
+animation: faseInLeft 0.7s ease;
+animation-fill-mode: forwards;
+}
+@keyframes faseInLeft{
+from{
+opacity: 0;
+transform: translateX(-50%);
+}
+to{
+opacity: 1;
+transform: translateX(0%);
+}
+}
+
+.activeRight{
+animation: faseInRight 0.7s ease;
+animation-fill-mode: forwards;
+}
+@keyframes faseInRight{
+from{
+opacity: 0;
+transform: translateX(50%);
+}
+to{
+opacity: 1;
+transform: translateX(0%);
+}
+}
+
