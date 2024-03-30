@@ -1,0 +1,2 @@
+            <Proyecto urlImagen="/img/ajedrez.jpeg" nombre="ProyectoA" descripcion="esta es una descripción del proyecto, tiene que ser un poco largapa que ocupe varias líneas pq sino pues pel y pues un poco más sabes"
+            tecnologias={["java","javafx","mysql"]}/> 
