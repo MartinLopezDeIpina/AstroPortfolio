@@ -1,0 +1,37 @@
+---
+import Tecnologia from "../Tecnologias/Tecnologia.astro";
+
+let tecnologias = Astro.props.tecnologias;
+
+let clase = Astro.props.class;
+---
+
+<div class=`divVideo ${clase}`>
+    <img src="img/ajedrez.jpeg"/>
+    <div class="divTecnologias">
+        {tecnologias.map(tec =>{
+            return <Tecnologia nombre={tec}/>
+        })}
+    </div>
+</div>
+
+<style>
+    .divVideo{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 25px;
+
+        width: 60%;
+    }
+    .divVideo img{
+        width: 640px;
+        height: 360px;
+    }
+
+    .divTecnologias{
+        display: flex;
+        justify-content: center;
+        gap:25px;
+    }
+</style>
