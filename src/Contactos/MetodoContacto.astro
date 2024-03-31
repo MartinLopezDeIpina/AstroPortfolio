@@ -1,0 +1,61 @@
+---
+let link = Astro.props.link;
+let path = Astro.props.path;
+let svgWidth = Astro.props.svgWidth;
+let svgHeight = Astro.props.svgHeight;
+let viewbox = Astro.props.viewbox;
+let color = Astro.props.color;
+
+let invertido = Astro.props.invertido;
+
+---
+					
+<a href={link} class="contacto">
+    <svg class=`circle ${invertido ? 'circleInvertido SVGInvertido' : 'circleNoInvertido SVGNoInvertido'} ${color == 'rojo' ? 'rojo' : ''}` xmlns="http://www.w3.org/2000/svg" width={svgWidth} height={svgHeight} viewBox={viewbox}>
+        <path d={path}/>
+    </svg>
+</a>
+
+<style>
+    .circle {
+		width: 55px;
+		height: 55px;
+		border-radius: 50%;
+	}
+	.circle:hover{
+		transition:  0.2s;
+		transform: scale(1.1);
+	}
+	.circleNoInvertido{
+		background-color: var(--color-surface-400);
+		border: 2px solid var(--color-surface-400);
+	}
+	.circleNoInvertido:hover{
+		background-color: var(--color-primary-600);
+	}
+	.SVGNoInvertido{
+		fill: var(--color-surface-200);
+	}
+	.circleInvertido{
+		background-color: var(--color-surface-200);
+		border: 2px solid var(--color-surface-400);
+	}
+	.SVGInvertido{
+		fill: var(--color-surface-400);
+	}
+	.SVGInvertido:hover{
+		fill: var(--color-tertiary-600);
+	}
+	
+	.contacto{
+		max-width:55px;
+		max-height:55px;
+	}
+	.contacto img{
+		box-sizing: border-box;
+		border:none;
+	}
+    .rojo:hover{
+        fill: var(--color-primary-600);
+    }
+</style>

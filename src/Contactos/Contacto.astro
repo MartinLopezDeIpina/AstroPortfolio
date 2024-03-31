@@ -1,0 +1,70 @@
+---
+import MetodoContactoGithub from "./MetodoContactoGithub.astro"
+import MetodoContactoLinkedin from "./MetodoContactoLinkedin.astro"
+import MetodoContactoEmail from "./MetodoContactoEmail.astro"
+import MetodoContactoTelefono from "./MetodoContactoTelefono.astro"
+import MetodoContactoCV from "./MetodoContactoCV.astro"
+import MetodoContactoUbicacion from "./MetodoContactoUbicacion.astro"
+import MetodoContacto from "./MetodoContacto.astro"
+
+---
+
+<div class="divIntro">
+    <p>Actualmente estoy buscando <span class="pRojo">prácticas</span> y la oportunidad de realizar el <span class="pRojo">TFG</span> en empresa. 
+        Si tienes alguna oferta no dudes en contactarme.</p>
+</div>
+<div class="divContactos">
+    <div class="divContacto fadeInLeft">
+        <MetodoContactoEmail />
+        <h4>martin.lopzdeipina@gmail.com</h4>
+    </div>
+    <div class="divContacto fadeInLeft">
+        <MetodoContactoTelefono />
+        <h4>619 31 95 35</h4>
+    </div>
+    <div class="divContacto fadeInLeft">
+        <MetodoContactoUbicacion />
+        <h4>Donostia-San Sebastián</h4>
+    </div>
+    <div class="divContacto fadeInLeft">
+        <MetodoContactoUbicacion />
+        <h4>Vitoria-Gasteiz</h4>
+    </div>
+    <div class="divOtros fadeInLeft">
+        <MetodoContactoGithub />
+        <MetodoContactoLinkedin />
+        <MetodoContactoCV />
+    </div>
+</div>
+<hr>
+
+<style>
+    .divOtros{
+        display:flex;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 25px;
+    }
+    .divContactos{
+        display:flex;
+        flex-direction: column;
+        align-items: left;
+        width: fit-content;
+        margin-left: 100px;
+        margin-bottom: 50px;
+    }
+    .divContacto{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        gap: 25px;
+    }
+    h4{
+        font-size: 18px;
+        color: var(--color-on-surface);
+    }
+    hr{
+        color:var(--color-on-surface);
+    }
+</style>

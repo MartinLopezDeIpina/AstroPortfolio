@@ -1,6 +1,7 @@
 ---
 import Proyectos from "./proyectos/Proyectos.astro";
 import Conocimientos from "./Conocimientos.astro";
+import Contacto from "../Contactos/Contacto.astro";
 
 let nombreSeccion = Astro.props.nombreSeccion;
 let Componente;
@@ -11,6 +12,9 @@ switch (nombreSeccion) {
         break;
     case "Conocimientos":
         Componente = Conocimientos;
+        break;
+    case "Contacto":
+        Componente = Contacto;
         break;
     default:
         Componente = null;
@@ -40,7 +44,7 @@ switch (nombreSeccion) {
         display: flex;
         align-items: center;
         margin-bottom: 25px;
-        margin-top: 150px;
+        margin-top: 100px;
         align-self: left;
         left:0;
         gap:10px;
