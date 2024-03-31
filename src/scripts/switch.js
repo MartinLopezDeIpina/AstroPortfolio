@@ -5,17 +5,15 @@ switchElement.addEventListener('change', () => {
 });
 
 function updateTheme(){
-    const htmlElement = document.querySelector('html');
-
     const theme = getLocalStorageTheme();
 
     if (theme === 'dark') {
-        htmlElement.classList.remove('dark');
-        htmlElement.classList.add('light');
+        document.documentElement.classList.remove('dark');
+        document.documentElement.classList.add('light');
         localStorage.setItem('theme', 'light');
     }else{
-        htmlElement.classList.remove('light');
-        htmlElement.classList.add('dark');
+        document.documentElement.classList.remove('light');
+        document.documentElement.classList.add('dark');
         localStorage.setItem('theme', 'dark');
     }
 

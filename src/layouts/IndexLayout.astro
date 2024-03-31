@@ -9,21 +9,27 @@ const { tituloPagina } = Astro.props;
 
 ---
 
+<script>
+    import "../scripts/checkTheme";
+</script>
 
 <html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{tituloPagina}</title>
+    <link rel="icon" href="/public/svg/logo.svg">
 
     <Tooltips interactive={false} delay={[15, 15]}/>
 </head>
 <body>
-    <div id="inicio"></div>
+    <div id="inicio" class="section"></div>
     <Header/>
     <slot />    
     <Footer />
     <script src="/src/scripts/socialLinks.js"></script>
+    <script src="/src/scripts/scrollActiveNavs.js"></script>
 </body>
 <style is:global>
     body {
@@ -35,6 +41,8 @@ const { tituloPagina } = Astro.props;
 <style>
     html{
         min-height: 200%;
+        scroll-behavior: smooth;
+        scroll-margin: 0px;
     }
 	body{
 		width:75%;
