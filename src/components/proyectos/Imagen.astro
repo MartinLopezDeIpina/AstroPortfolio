@@ -9,7 +9,7 @@ let clase2 = Astro.props.class2;
 
 <div class=`divImagen ${clase}`>
     <div class=`divImagenLink ${clase2} `>
-        <img src="img/matt.png"/>
+        <img src={urlImagen}/>
         <div class="divLink">
             <a href="https://github.com/">
                 <svg width="35px" height="35px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,6 +26,8 @@ let clase2 = Astro.props.class2;
 <style>
     .derecha{
         align-self: flex-start;
+        display:flex;
+        justify-content: flex-start;
     }
     .izquierda{
         align-self: flex-end;
@@ -42,13 +44,15 @@ let clase2 = Astro.props.class2;
     .divImagen{
         display: flex;
         flex-direction: column;
-        justify-content: left;
         gap: 15px;
         width: 40%;
     }
     .divImagen img{
-        width: 250px;
-        height: 250px;
+        align-self:flex-start;
+        object-fit: contain;
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
     }
     .divImagenLink{
         position: relative;

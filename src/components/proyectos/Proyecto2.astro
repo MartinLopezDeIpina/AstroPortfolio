@@ -8,6 +8,7 @@ let descripcion = Astro.props.descripcion;
 let comentarios = Astro.props.comentarios;
 let tecnologias = Astro.props.tecnologias;
 let urlImagen = Astro.props.urlImagen;
+let urlVideo = Astro.props.urlVideo;
 
 let derecha = Astro.props.derecha;
 ---
@@ -15,13 +16,13 @@ let derecha = Astro.props.derecha;
 <div class="divGeneral">
     {derecha ? (
         <>
-            <Video class="fadeInLeft" tecnologias={tecnologias} />
+            <Video class="fadeInLeft" urlVideo={urlVideo} tecnologias={tecnologias} />
             <Imagen class="fadeInRight" class2="derecha" nombre={nombre} descripcion={descripcion} urlImagen={urlImagen} />
         </>
     ) : (
         <>
             <Imagen class="fadeInLeft" class2="izquierda" nombre={nombre} descripcion={descripcion} urlImagen={urlImagen} />
-            <Video class="fadeInRight" tecnologias={tecnologias} />
+            <Video class="fadeInRight" urlVideo={urlVideo} tecnologias={tecnologias} />
         </>
     )}
 </div>
