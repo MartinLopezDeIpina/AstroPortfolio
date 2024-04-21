@@ -1,36 +1,40 @@
+
 .light{
-    /** CSS LIGHT THEME PRIMARY COLORS */
-     --color-primary-100:  #38b6c5;
-     --color-primary-200:  #2fa1b1;
-     --color-primary-300:  #268b9d;
-     --color-primary-400:  #1d7689;
-     --color-primary-500:  #146173;
-     --color-primary-600:  #0b4c5d;
+    /** CSS DARK THEME PRIMARY COLORS */
+     --color-primary-100:  #c7493a;
+     --color-primary-200:  #d05f4e;
+     --color-primary-300:  #d97462;
+     --color-primary-400:  #e18877;
+     --color-primary-500:  #e89c8c;
+     --color-primary-600:  #eeafa2;
 
-     /** CSS LIGHT THEME tertiary COLORS */
-     --color-tertiary-100:  #97688a;
-     --color-tertiary-200:  #877d7c;
-     --color-tertiary-300:  #786f6e;
-     --color-tertiary-400:  #686260;
-     --color-tertiary-500:  #595552;
-     --color-tertiary-600:  #442f40;
+     /** CSS DARK THEME tertiary COLORS */
+     --color-tertiary-100:  #689775;
+     --color-tertiary-200:  #78a283;
+     --color-tertiary-300:  #89ae92;
+     --color-tertiary-400:  #99b9a1;
+     --color-tertiary-500:  #aac4b0;
+      --color-tertiary-600:  #bbd0bf;
 
-    /** CSS LIGHT THEME SURFACE COLORS */
-     --color-surface-100:  #edede3;
-     --color-surface-200:  #d7d7d6;
-     --color-surface-300:  #c0c0c9;
-     --color-surface-400:  #a8a8bc;
-     --color-surface-500:  #9191af;
-     --color-surface-600:  #7a7aa2;
+    /** CSS DARK THEME SURFACE COLORS */
+    --color-surface-100:  #ffffff;
+    --color-surface-150: #f2f2f2;
+    --color-surface-200:  #e6e6e6;
+    --color-surface-300:  #d1d1d1;
+    --color-surface-400:  #bcbcbc;
+    --color-surface-500:  #a7a7a7;
+    --color-surface-600:  #929292;
     
-    /** CSS LIGHT THEME MIXED SURFACE COLORS */
-     --color-surface-mixed-100:  #dce6e9;
-     --color-surface-mixed-200:  #c7d1d4;
-     --color-surface-mixed-300:  #b1bbbe;
-     --color-surface-mixed-400:  #9ba6a8;
-     --color-surface-mixed-500:  #85918c;
-     --color-surface-mixed-600:  #6f7c70;
-
+    /** CSS DARK THEME MIXED SURFACE COLORS */
+     --color-surface-mixed-100:  #231916;
+     --color-surface-mixed-200:  #382e2b;
+     --color-surface-mixed-300:  #4e4542;
+     --color-surface-mixed-400:  #655c5a;
+     --color-surface-mixed-500:  #7d7573;
+     --color-surface-mixed-600:  #958f8d;
 
      --color-on-surface: #000000;
+
+     --color-sparkles: var(--color-primary-100);
+ 
 }

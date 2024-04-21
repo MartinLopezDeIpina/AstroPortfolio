@@ -32,6 +32,12 @@
      --color-surface-mixed-500:  #7d7573;
      --color-surface-mixed-600:  #958f8d;
 
-     --color-on-surface: #ffffff;
- 
+     --color-on-surface: white;
+
+     --color-sparkles: var(--color-primary-600);
+
 }
+    
+    
+    
+    

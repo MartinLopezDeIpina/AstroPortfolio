@@ -6,7 +6,7 @@ const particulas = [];
 let canvas = document.getElementById('lienzo');
 let ctx;
 
-let colorOnSurface = getComputedStyle(canvas).getPropertyValue('--color-primary-600').trim();
+let colorOnSurface = getComputedStyle(canvas).getPropertyValue('--color-sparkles').trim();
 console.log(colorOnSurface);
 
 canvas.addEventListener('canvasResized', () => {
@@ -44,7 +44,7 @@ function hexToRgba(hex, opacity) {
 }
 
 document.addEventListener('colorChanged', () =>{
-    colorOnSurface = getComputedStyle(canvas).getPropertyValue('--color-primary-600').trim();
+    colorOnSurface = getComputedStyle(canvas).getPropertyValue('--color-sparkles').trim();
     console.log(colorOnSurface);
 });
 
