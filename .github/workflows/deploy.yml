@@ -38,5 +38,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "martinlopez-astroportfolio"
-          entrypoint: "server/entry.mjs"
+          entrypoint: "_astro/entry.mjs"
           root: "dist"
