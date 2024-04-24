@@ -97,4 +97,23 @@ switch (nombreSeccion) {
         100% { opacity: 1.0; }
     }
 
+    @media screen and (max-width: 768px){
+       .divTerminal h3, span{
+            font-size: 32px;
+       } 
+       .text::after{
+            width: 7.6px;
+            height: 28.6px;
+       }
+    }
+    @media screen and (max-width: 600px){
+       .divTerminal h3, span{
+            font-size: 24px;
+       } 
+       .text::after{
+            width: 5.7px;
+            height: 21.4px;
+       }
+    }
+
 </style>
