@@ -27,15 +27,9 @@ let clase = Astro.props.class;
     }
     .divVideo video{
         object-fit: contain;
-        width:700px;
+        width:100%;
         height: auto;
         border-radius: 10px;
-    }
-    @media screen and (max-width: 768px) {
-        .divVideo video{
-            width:400px;     
-           }
-        
     }
 
     video:hover{
@@ -51,5 +45,11 @@ let clase = Astro.props.class;
         display: flex;
         justify-content: center;
         gap:25px;
+    }
+
+    @media screen and (max-width: 1300px) {
+        .divVideo{
+            width: 100%;
+        }
     }
 </style>
