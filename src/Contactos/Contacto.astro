@@ -81,5 +81,25 @@ import Linux from "./Linux.astro"
         .divPrincipal{
             flex-direction: column;
         }
+        .divIntro{
+            max-width: 100%;
+        }
     }
+
+
+	@media screen and (max-width: 1100px) {
+		.divIntro p{
+			font-size: 24px;
+		}
+	}
+	@media screen and (max-width: 900px) {
+		.divIntro p{
+			font-size: 20px;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		.divIntro p{
+			font-size: 16px;
+		}
+	}
 </style>
