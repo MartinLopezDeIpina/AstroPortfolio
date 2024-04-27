@@ -29,6 +29,9 @@ const showName = Astro.props.showName;
         top:0;
         z-index: 4;
         background-color: var(--color-surface-100);
+
+        width: 140%;
+        margin-left: -20%;
     }
     .pNombre{
         margin:0px;
@@ -62,19 +65,23 @@ const showName = Astro.props.showName;
         display: flex;
         align-items: center;
         gap:30px;
+
+        margin-left: 15%;
+    }
+
+    nav{
+        margin-right: 10%;
     }
 
     @media (max-width: 768px){
         .divIzquierda{
             width: 100%;
             justify-content: space-between;
+            margin-left: 5%;
         }
         header{
             width: 140%;
             margin-left: -20%;
-        }
-        .divIzquierda{
-            margin-left: 5%;
         }
     }
 
