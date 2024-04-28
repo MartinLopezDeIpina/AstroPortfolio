@@ -38,7 +38,7 @@ const nombre = "Martín López de Ipiña";
 				<p class="fadeInSubtitulo2">Actualmente estoy cursando el tercer curso, </span>especializado en <span class="pRojo">Ingeniería del Software</span>. Me gusta programar y estoy motivado a aprender todo lo relacionado con la <span class="pRojo">Arquitectura del Software</span>.</p>
 			</div>
 		</div>
-		<a class="aProyectos divFlecha" href="#Proyectos">
+		<a class="aProyectos divFlecha animationSVG" href="#Proyectos">
 			Proyectos
 			<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path class="svgFlecha" d="M7 10L12 15L17 10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -89,6 +89,17 @@ const nombre = "Martín López de Ipiña";
 		}
 	}
 
+	@keyframes faseInBottom{
+		from{
+			opacity: 0;
+			transform: translateY(50%);
+		}
+		to{
+			opacity: 1;
+			transform: translateY(0%);
+		}
+	}
+
 	.fadeInSubtitulo1{
 		animation: faseInBlur 0.8s ease;
 		opacity:0;
@@ -106,6 +117,15 @@ const nombre = "Martín López de Ipiña";
 		animation-delay: 0.5s;
 		opacity:0;
 		animation-fill-mode: forwards;
+	}
+	.animationSVG {
+		animation-name: faseInBottom, parpadeo;
+		animation-duration: 0.5s, 2s;
+		animation-timing-function: ease, ease;
+		animation-fill-mode: forwards, forwards;
+		animation-iteration-count: 1, infinite;
+		animation-delay: 2s, 1s;
+		opacity: 0;
 	}
 	@keyframes faseInBlur{
 		from{
@@ -253,7 +273,6 @@ const nombre = "Martín López de Ipiña";
 		flex-direction: column;
 		align-items: center;
 		margin-top: 20px;
-		animation: parpadeo 2s ease infinite;
 	}
 	.aProyectos{
 		font-size: 14px;
