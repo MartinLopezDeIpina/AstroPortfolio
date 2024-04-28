@@ -38,6 +38,12 @@ const nombre = "Martín López de Ipiña";
 				<p class="fadeInSubtitulo2">Actualmente estoy cursando el tercer curso, </span>especializado en <span class="pRojo">Ingeniería del Software</span>. Me gusta programar y estoy motivado a aprender todo lo relacionado con la <span class="pRojo">Arquitectura del Software</span>.</p>
 			</div>
 		</div>
+		<a class="aProyectos divFlecha" href="#Proyectos">
+			Proyectos
+			<svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path class="svgFlecha" d="M7 10L12 15L17 10" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+		</a>
 	</div>
 </div>
 <div>
@@ -228,6 +234,37 @@ const nombre = "Martín López de Ipiña";
     .imgLogo:hover{
         transform: scale(1.2);
     }
+
+	@keyframes parpadeo{
+
+		0%{
+			transform: translateY(0px);
+		}
+		50%{
+			transform: translateY(5px);
+		}
+		100%{
+			transform: translateY(0px);
+		}
+	}
+	
+	.divFlecha{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 20px;
+		animation: parpadeo 2s ease infinite;
+	}
+	.aProyectos{
+		font-size: 14px;
+		color: var(--color-on-surface);
+		text-decoration: none;
+		font-weight: bold;
+	}
+	.svgFlecha{
+		stroke: var(--color-on-surface);
+		stroke-width: 1.5;
+	}
 
 	@media screen and (max-width: 1500px) {
 		#h1Nombre {
