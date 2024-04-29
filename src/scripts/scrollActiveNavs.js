@@ -1,5 +1,5 @@
 const sections = document.querySelectorAll('.section');
-const navLinks = document.querySelectorAll('nav a');
+const navLinks = document.querySelectorAll('.nav-links a');
 
 addActiveIfInView();
 
