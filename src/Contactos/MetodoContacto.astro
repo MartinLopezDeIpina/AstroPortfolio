@@ -11,7 +11,7 @@ let invertido = Astro.props.invertido;
 
 ---
 					
-<a href={link || "#"} download={download ? "Martín_López_de_Ipiña_CV" : undefined} target="_blank" class="contacto">
+<a href={link} download={download ? "Martín_López_de_Ipiña_CV" : undefined} target="_blank" class="contacto">
     <svg class=`circle ${invertido ? 'circleInvertido SVGInvertido' : 'circleNoInvertido SVGNoInvertido'} ${color == 'rojo' ? 'rojo' : ''}`  xmlns="http://www.w3.org/2000/svg" width={svgWidth} height={svgHeight} viewBox={viewbox}>
         <path d={path}/>
     </svg>
