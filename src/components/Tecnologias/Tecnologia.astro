@@ -4,7 +4,7 @@ let nombre = Astro.props.nombre;
 
 let url = `/svg/tech/${nombre}.svg`;
 ---
-<img src={url} title={nombre}>
+<img alt=`Logo de ${nombre}` src={url} title={nombre}>
 
 <style>
     img {
