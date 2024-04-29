@@ -5,13 +5,14 @@ let svgWidth = Astro.props.svgWidth;
 let svgHeight = Astro.props.svgHeight;
 let viewbox = Astro.props.viewbox;
 let color = Astro.props.color;
+let download = Astro.props.download;
 
 let invertido = Astro.props.invertido;
 
 ---
 					
-<a href={link} target="_blank" class="contacto">
-    <svg class=`circle ${invertido ? 'circleInvertido SVGInvertido' : 'circleNoInvertido SVGNoInvertido'} ${color == 'rojo' ? 'rojo' : ''}` xmlns="http://www.w3.org/2000/svg" width={svgWidth} height={svgHeight} viewBox={viewbox}>
+<a href={link} download={download ? "Martín_López_de_Ipiña_CV" : undefined} target="_blank" class="contacto">
+    <svg class=`circle ${invertido ? 'circleInvertido SVGInvertido' : 'circleNoInvertido SVGNoInvertido'} ${color == 'rojo' ? 'rojo' : ''}`  xmlns="http://www.w3.org/2000/svg" width={svgWidth} height={svgHeight} viewBox={viewbox}>
         <path d={path}/>
     </svg>
 </a>
