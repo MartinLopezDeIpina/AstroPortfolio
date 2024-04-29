@@ -38,6 +38,7 @@ export class Particle {
     }
 
     move(){
+        console.log(`opacidad: ${this.opacity}`);
         this.changeOpacity();
 
         const dx = this.mouse.x - this.x;

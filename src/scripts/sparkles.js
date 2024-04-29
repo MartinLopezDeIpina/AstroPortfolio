@@ -1,25 +1,36 @@
 import {Particle} from './Particula.js';
 
 const numParticulas = 100;
-const particulas = [];
+let particulas = [];
 
 let canvas = document.getElementById('lienzo');
 let ctx;
+let interval;
 
 let colorOnSurface = getComputedStyle(canvas).getPropertyValue('--color-sparkles').trim();
 console.log(colorOnSurface);
 
 canvas.addEventListener('canvasResized', () => {
+    if (interval) {
+        clearInterval(interval);
+    }
+
     ctx = canvas.getContext('2d');
 
     for (let i = 0; i < numParticulas; i++) {
         particulas.push(new Particle(canvas));
     }
 
-    setInterval(() => {
+    interval = setInterval(() => {
         particulas.forEach(p => p.move());
         dibujarParticulas();
     }, 30);
+});
+
+window.addEventListener('beforeunload', () => {
+    if (interval) {
+        clearInterval(interval);
+    }
 });
 
 function dibujarParticulas(){

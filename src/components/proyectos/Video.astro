@@ -8,7 +8,7 @@ let clase = Astro.props.class;
 ---
 
 <div class=`divVideo ${clase}`>
-    <video id="videoPlayer" src={urlVideo} autoplay loop onclick="if (this.paused) { this.play(); this.classList.remove('paused'); } else { this.pause(); this.classList.add('paused'); }"></video>
+    <video id="videoPlayer" src={urlVideo} muted autoplay loop onclick="if (this.paused) { this.play(); this.classList.remove('paused'); } else { this.pause(); this.classList.add('paused'); }"></video>
     <div class="divControles">
         <svg class="svgPlay botonPausa" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path class="svgPause" d="M8 5V19M16 5V19" stroke-linejoin="round"/>
