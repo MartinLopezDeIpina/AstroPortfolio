@@ -8,7 +8,6 @@ let ctx;
 let interval;
 
 let colorOnSurface = getComputedStyle(canvas).getPropertyValue('--color-sparkles').trim();
-console.log(colorOnSurface);
 
 canvas.addEventListener('canvasResized', () => {
     if (interval) {
@@ -56,7 +55,6 @@ function hexToRgba(hex, opacity) {
 
 document.addEventListener('colorChanged', () =>{
     colorOnSurface = getComputedStyle(canvas).getPropertyValue('--color-sparkles').trim();
-    console.log(colorOnSurface);
 });
 
     

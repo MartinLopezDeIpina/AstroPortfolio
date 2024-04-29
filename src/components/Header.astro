@@ -24,7 +24,6 @@ const showName = Astro.props.showName;
     header{
         padding-top:30px;
         padding-bottom: 10px;
-        margin-bottom:40px;
         position:sticky;
         top:0;
         z-index: 4;
@@ -77,6 +76,11 @@ const showName = Astro.props.showName;
         .divIzquierda{
             width: 100%;
             justify-content: space-between;
+        }
+    }
+    @media (max-width: 500px){
+        .divIzquierda{
+            margin-left: 5%;
         }
     }
 
